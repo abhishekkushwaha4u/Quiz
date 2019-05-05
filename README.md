@@ -1,1 +1,1 @@
-"# Quiz-App" 
+A simple quiz app in django 
