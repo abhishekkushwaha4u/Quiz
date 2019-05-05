@@ -12,3 +12,4 @@ class multiple_choice(models.Model):
     def __str__(self):
            return "{}) {} \n {} \t {} \n {} \t {}".format(self.question_number, self.question,self.a,self.b,self.c,self.d)
 
+#class improved_questions(models.Model):
