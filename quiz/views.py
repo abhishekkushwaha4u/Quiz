@@ -8,10 +8,10 @@ from .models import multiple_choice
 from .serializers import multiple_choiceSerializer
 
 def home_page(request):
-    return HttpResponse("This is home page")
+    return render(request,"quiz/home.html")
 
-def contact_page(request):
-    return HttpResponse("This is contact page")
+def about(request):
+    return HttpResponse("This is about page")
 
 # for QuizAPI
 class multiple_choice_new(APIView):
@@ -111,6 +111,8 @@ def answer(request):
                 print("You got negative marking!")
                 score-=1
         return HttpResponse("Done! Your score is "+str(score))
+    else:
+        return HttpResponse("Access Restricted!")
 
         
 

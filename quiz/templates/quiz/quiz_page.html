@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/static/css/style1.css">
+  <link rel="stylesheet" href="/quiz/static/css/style1.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main Quiz</title>
+        <title>Main Quiz</title>
 </head>
 
 <body>
@@ -15,23 +13,23 @@
         {% csrf_token %}
         {% for k in context%}        
         <div class="parent"><h3>{{k.question_number}})</h3>
-        <h3>{{ k.question }}</h3></div><br>
-        <label class="container" ><h5>A. {{k.a}}</h5>
+        <h3>{{ k.question }}</h3></div>
+        <label class="container" ><h4>A. {{k.a}}</h4>
             <input type="checkbox" name="A" value={{k.question_number}}>
             <span class="checkmark"></span>
         </label>
 
-        <label class="container" ><h5>B. {{k.b}}</h5>
+        <label class="container"><h4>B. {{k.b}}</h4>
             <input type="checkbox" name="B" value={{k.question_number}}>
             <span class="checkmark"></span>
         </label>
 
-        <label class="container" ><h5>C. {{k.c}}</h5>
+        <label class="container" ><h4>C. {{k.c}}</h4>
             <input type="checkbox" name="C"  value={{k.question_number}}>
             <span class="checkmark"></span>
         </label>
 
-        <label class="container" ><h5>D. {{k.d}}</h5>
+        <label class="container" ><h4>D. {{k.d}}</h4>
             <input type="checkbox" name="D" value={{k.question_number}}>
             <span class="checkmark"></span>
         </label>
